@@ -1,0 +1,13 @@
+name: Test macos-latest
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-macos-latest:
+    runs-on: macos-latest
+    steps:
+      - name: Install build runtime
+        run: |
+          brew list pkg-config || true
+          brew install pkg-config
