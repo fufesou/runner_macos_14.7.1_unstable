@@ -10,4 +10,5 @@ jobs:
       - name: Install build runtime
         run: |
           brew list pkg-config || true
+          pkg-config --version || true
           brew install pkg-config
